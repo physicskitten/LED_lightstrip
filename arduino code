@@ -7,15 +7,16 @@ git remote add origin https://github.com/physicskitten/LED_lightstrip.git
 git push -u origin main
 
 #include <FastLED.h>
-#define LED_PIN    13
-//#define CLK_PIN   4
+#define LED_PIN    12
 #define LED_TYPE    SK6812
 #define NUM_LEDS    144
 #define COLOR_ORDER GRB
+#define NUM_COLOURS 2
+#define CONSEC_LED 5
 CRGB leds[NUM_LEDS];
 
-//#define BRIGHTNESS          96
-//#define FRAMES_PER_SECOND  120
+#define BRIGHTNESS          96
+#define FRAMES_PER_SECOND  120
 
 void setup() {
   // put your setup code here, to run once:
@@ -34,10 +35,10 @@ void loop() {
   //leds[2] = CRGB(0, 0, 255);
   //FastLED.show();
 
-  //attempting a pattern of alternating 5 red and 5 blue
-  int i; //declare i again
+  //getting the red and blue alternating colours
+  int i; //declare i again for some reason
   for (int i = 0; i < NUM_LEDS; i++) {
-    if ((i/5) % 2 == 0) {
+    if ((i/CONSEC_LED) % NUM_COLOURS == 0) {
       leds[i] = CRGB(255, 0, 0); //Red light
     } else {
       leds[i] = CRGB(0, 0, 255); //Blue light
