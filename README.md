@@ -1,4 +1,6 @@
-This repository contains code to control a programmable LED light strip using the FastLED library. The project is set up to display alternating red and blue colors on the LEDs, but it can be easily modified to support different colors and patterns.
+# LED Light Patterns with FastLED
+
+This project utilizes the [FastLED](http://fastled.io/) library to create dynamic light patterns on an LED strip. The code implements two different patterns: a rainbow effect and an alternating red and blue pattern with a customizable delay. The LED strip is made up of SK6812 LEDs and is controlled by an Arduino or a similar microcontroller.
 
 # Features
 - **LED Type:** SK6812
@@ -7,8 +9,6 @@ This repository contains code to control a programmable LED light strip using th
 - **Brightness:** 96
 - **Frame Rate:** 120 FPS
 - **Alternating Red and Blue Colors:** The LED strip displays a sequence of red and blue colors, with each color occupying five consecutive LEDs.
-
-# Getting Started
 
 ## Prerequisites
 - Arduino IDE installed on your computer.
